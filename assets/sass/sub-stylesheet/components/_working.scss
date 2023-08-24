@@ -1,0 +1,38 @@
+.education,
+.working {
+  @extend %bg-white;
+  padding: 40px;
+
+  h4 {
+    @extend %text-600;
+    color: $text-color1;
+  }
+
+  .content {
+    h5 {
+      @extend %text-600;
+      color: #44566c;
+      @extend %mt-30;
+    }
+
+    .btn_location {
+      @extend %mt-20;
+      @extend %flex;
+      @extend %align-items-center;
+      .work_btn {
+        padding: 6px 30px;
+        @extend %theme-color;
+        @extend %mr-20;
+        color: $white-color;
+        @extend %text-600;
+      }
+      h6 {
+        @extend %text-500;
+        color: #707070;
+      }
+    }
+    p {
+      @extend %mt-20;
+    }
+  }
+}

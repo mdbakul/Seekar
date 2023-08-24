@@ -1,0 +1,20 @@
+.about {
+  background: $section-bg;
+  @extend %section-padding;
+  h4 {
+    color: $text-color1;
+    @extend %text-600;
+  }
+  h5 {
+
+    color: $text-color1;
+    @extend %text-500;
+    @extend %mt-30;
+  }
+  .about-content {
+    p {
+      text-align: justify;
+      @extend %mt-15;
+    }    
+  }
+}

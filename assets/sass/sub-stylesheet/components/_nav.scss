@@ -1,0 +1,80 @@
+.nav {
+  @extend %bg-white;
+
+  @include breakpoint(lg) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    // background: $white-color;
+  }
+  &.mobilenav {
+    position: relative;
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+
+  ul {
+    &.target {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      transition: 0.3s;
+      width: 100%;
+      padding-left: 15px;
+    }
+
+    @include breakpoint(lg) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: 20px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      position: inherit;
+    }
+
+    li {
+      padding: 20px 10px;
+      a {
+        font-size: $fs-large;
+        @extend %text-600;
+        color: $text-color1;
+        @include breakpoint(lg) {
+          &:hover {
+            color: $theme1Color;
+            @include add-prefix(transition, 0.2s);
+          }
+        }
+      }
+    }
+    &.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      transition: 0.3s;
+      @extend %theme-color;
+    }
+  }
+  .bar {
+    @extend %d-block;
+    width: 100%;
+    padding: 20px 40px;
+    background: $text-color2;
+
+    @include breakpoint(lg) {
+      display: none;
+    }
+    i {
+      font-size: $fs-large;
+      @extend %flex;
+      @extend %justify-end;
+      @extend %white-color;
+      font-size: 20px;
+    }
+  }
+}
+
+.desktopnav {
+  @extend %d-none;
+  @include breakpoint(lg) {
+    display: block;
+  }
+}

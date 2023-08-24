@@ -1,0 +1,66 @@
+.inner_side {
+  background: $white-color;
+  @extend %text-center;
+  @extend %p-15;
+  @include breakpoint(lg) {
+    padding: 30px;
+  }
+
+  .inner_img {
+    margin: 0 auto;
+  }
+  .profile {
+    h3 {
+      color: $text-color1;
+      @extend %my-40;
+      @extend %mb-0;
+      @extend %text-600;
+    }
+    h6 {
+      @extend %text-400;
+      color: #54595f;
+    }
+    .social-icon {
+      i {
+        margin: 0 10px;
+        color: $theme1Color;
+        cursor: pointer;
+      }
+    }
+    .contact-icon {
+      @extend %mt-30;
+      @extend %flex;
+      @extend %justify-center;
+      .inner-contact {
+        @extend %flex;
+        .icon {
+          width: 19px;
+
+          i {
+            color: $theme1Color;
+            cursor: pointer;
+          }
+        }
+        .dot {
+          margin-left: 22px;
+          margin-right: 9px;
+        }
+        .contact-text {
+          p {
+            @extend %text-500;
+          }
+        }
+      }
+    }
+  }
+  .side-btn {
+    background: $theme1Color;
+    @extend %d-inline-block;
+    padding: 8px 30px;
+    @extend %mt-25;
+    cursor: pointer;
+    color: #fff;
+    @extend %text-500;
+    font-size: $fs-large;
+  }
+}

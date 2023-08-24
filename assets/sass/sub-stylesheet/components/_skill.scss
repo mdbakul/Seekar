@@ -1,0 +1,97 @@
+.skill {
+  background: #f7f7f7;
+  padding: 40px;
+}
+
+.left {
+  .left-skill-heading {
+    h4 {
+      color: $text-color1;
+      @extend %text-600;
+      @extend %mb-25;
+    }
+  }
+  .allleft_content {
+    .left-skil {
+      margin-top: 45px;
+
+      p {
+        @extend %mp-0;
+        @extend %text-400;
+        font-size: 20px;
+      }
+      .inner-left {
+        width: 100%;
+        height: 10px;
+        background: #cccccc;
+        @extend %mt-5;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 50%;
+          height: 100%;
+          @extend %theme-color;
+          -webkit-animation: animate 5s;
+          animation: animate 5s;
+        }
+        @keyframes animate {
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 50%;
+          }
+        }
+      }
+      &:nth-child(1) .inner-left-skill .inner-left::after {
+        width: 20%;
+        -webkit-animation: animate2 5s;
+        animation: animate2 5s;
+      }
+
+      @keyframes animate2 {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 20%;
+        }
+      }
+      &:nth-child(2) .inner-left-skill .inner-left::after {
+        width: 75%;
+        -webkit-animation: animate3 5s;
+        animation: animate3 5s;
+      }
+      @keyframes animate3 {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 75%;
+        }
+      }
+    }
+  }
+}
+
+.innersk {
+  &:nth-child(2) {
+    @extend %flex;
+    justify-content: flex-start;
+  }
+  &:nth-child(4) {
+    @extend %flex;
+    justify-content: flex-start;
+  }
+}
+
+.right {
+  .right-skill-headng {
+    h4 {
+      color: $text-color1;
+      @extend %text-600;
+      @extend %mb-25;
+    }
+  }
+}

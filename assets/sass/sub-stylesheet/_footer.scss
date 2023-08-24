@@ -1,0 +1,273 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+    &__top {
+        border-bottom: 1px solid rgba($white-color, $alpha: .05);
+        padding-block: 50px;
+        &--title {
+            h3 {
+                @extend %mb-0, %white-color;
+                @include breakpoint(lg) {
+                    @include breakpoint(max-xl) {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        &--form {
+            form {
+                @extend %flex;
+                gap: 15px;
+                padding: 5px;
+                @include border-radius(4px);
+                @include breakpoint(sm) {
+                    border: 1px solid rgba($white-color, $alpha: .1);
+                }
+                input {
+                    width: calc(100%);
+                    color: $white-color;
+                    background: transparent;
+                    border: 1px solid rgba($white-color, $alpha: .1);
+                    @include breakpoint(sm) {
+                        width: calc(100% - 215px);
+                        border: none;
+                    }
+                    &::placeholder {
+                        color: rgba($white-color, $alpha: .8);
+                    }
+                }
+                button {
+                    // width: 200px;
+                    border: 0;
+                    @extend %white-color;
+                    background: $theme-color2;
+                    @include border-radius(4px);
+                    @include breakpoint(sm) {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+    &__middile {
+        border-bottom: 1px solid rgba($white-color, $alpha: .05);
+        padding-block: 80px;
+    }
+    &__bottom {
+        padding-block: 30px;
+        p {
+            @extend %mb-0, %white-color;
+            a {
+                @extend %white-color, %text-capitalize;
+                &:hover {
+                    @extend %theme-color;
+                }
+            }
+        }
+    }
+    &__title {
+        h5 {
+            @extend %white-color, %mb-30, %text-capitalize;
+        }
+    }
+    &__about {
+        img {
+            @extend %mb-15;
+        }
+        p {
+            @extend %white-color, %mb-30;
+            line-height: 28px;
+            @include breakpoint(lg) {
+                @include breakpoint(max-xl) {
+                    max-width: 350px;
+                }
+            }
+        }
+        h6 {
+            @extend %white-color;
+        }
+        ul {
+            @extend %mt-30, %flex;
+            gap: 10px;
+            li {
+                @extend %d-inline-block;
+                @include border-radius(2px);
+                &:hover {
+                    span {
+                        display: inherit;
+                        @include breakpoint(max-xl) {
+                            display: none;
+                        }
+                    }
+                }
+                a {
+                    @extend %d-inline-block, %white-color;
+                    @include border-radius(2px);
+                }
+                i {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    border-radius: 100%;
+                    @extend %d-inline-block, %text-center;
+                }
+                span {
+                    @extend %d-none, %white-color, %text-capitalize;
+                    padding-right: 15px;
+                    @include transition($transition);
+                }
+            }
+        }
+    }
+    &__product {
+        &--thumb {
+            width: 90px;
+            height: 90px;
+            @extend %hidden;
+            @include border-radius(4px);
+            img {
+                @extend %w-100, %h-100;
+                object-fit: cover;
+                @include border-radius(4px);
+            }
+        }
+        &--content {
+            width: calc(100% - 90px);
+            @extend %pl-15;
+            @include breakpoint(lg) {
+                @include breakpoint(max-xl) {
+                    max-width: 270px;
+                }
+            }
+            h6 {
+                font-size: 16px;
+                a {
+                    @extend %white-color, %text-2;
+                    line-height: 1.5;
+                }
+            }
+            span {
+                @extend %theme-color, %d-inline-block;
+            }
+        }
+        ul {
+            li {
+                @extend %flex, %align-items-center;
+                padding-block: 15px;
+                border-bottom: 1px solid rgba($white-color, $alpha: .1);
+                &:last-child {
+                    border-bottom: none;
+                }
+                &:hover {
+                    .footer {
+                        &__product {
+                            &--thumb {
+                                img {
+                                    @include transform(scale(1.4));
+                                }
+                            }
+                            &--content {
+                                h6 {
+                                    a {
+                                        @extend %theme-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &--rating {
+            i {
+                color: $theme-color;
+                @include font-size(14px);
+            }
+        }
+    }
+    &__post {
+        &--thumb {
+            width: 90px;
+            height: 90px;
+            @extend %hidden;
+            @include border-radius(4px);
+            img {
+                @extend %w-100, %h-100;
+                object-fit: cover;
+                @include border-radius(4px);
+            }
+        }
+        &--content {
+            width: calc(100% - 90px);
+            @extend %pl-15;
+            @include breakpoint(lg) {
+                @include breakpoint(max-xl) {
+                    max-width: 270px;
+                }
+            }
+            h6 {
+                font-size: 16px;
+                a {
+                    @extend %white-color, %text-2;
+                    line-height: 1.5;
+                }
+            }
+            span {
+                @extend %theme-color, %d-inline-block;
+            }
+        }
+        ul {
+            li {
+                @extend %flex, %align-items-center;
+                padding-block: 15px;
+                border-bottom: 1px solid rgba($white-color, $alpha: .1);
+                &:last-child {
+                    border-bottom: none;
+                }
+                &:hover {
+                    .footer {
+                        &__post {
+                            &--thumb {
+                                img {
+                                    @include transform(scale(1.4));
+                                }
+                            }
+                            &--content {
+                                h6 {
+                                    a {
+                                        @extend %theme-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__gallery {
+        ul {
+            @extend %flex;
+            gap: 15px;
+            li {
+                @extend %d-inline-block, %hidden;
+                width: calc(100% / 3 - 15px);
+                a {
+                    @extend %d-block, %hidden;
+                    @include border-radius(4px);
+                    img {
+                        @extend %w-100;
+                    }
+                }
+                &:hover {
+                    a {
+                        img {
+                            @include transform(scale(1.2));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
